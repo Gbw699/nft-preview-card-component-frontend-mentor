@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+// - Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+// - Weights: 300, 400, 600
+// - Font size (paragraph): 18px
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+// ### Primary
+$SoftBlue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+
+// ### Neutral
+$VeryDarkBlueBG: hsl(217, 54%, 11%);
+$VeryDarkBlueCardBG: hsl(216, 50%, 16%);
+$VeryDarkBlueLine: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: $VeryDarkBlueBG;
+  color: $SoftBlue;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

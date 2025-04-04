@@ -1,0 +1,74 @@
+@use "../styles.scss" as s;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 18rem;
+  padding: 1.3rem;
+  border-radius: 10px;
+  background-color: s.$VeryDarkBlueCardBG;
+  &__img {
+    border-radius: 7px;
+    margin-bottom: 0.5rem;
+  }
+  &__title {
+    font-size: 1.45rem;
+    margin: 1rem 0;
+  }
+  &__link {
+    color: s.$White;
+    text-decoration: none;
+    &:hover {
+      color: s.$Cyan;
+    }
+    &:focus {
+      color: s.$Cyan;
+      outline: none;
+    }
+  }
+  &__description {
+    margin: 0;
+    margin-bottom: 1rem;
+    line-height: 1.7rem;
+    &--nowrap {
+      text-wrap: nowrap;
+    }
+  }
+  &__icon {
+    width: 18px;
+    &--big {
+      height: 30px;
+      border: 1px solid s.$White;
+      border-radius: 50%;
+    }
+  }
+  &__price {
+    color: s.$Cyan;
+    text-wrap: nowrap;
+  }
+}
+
+.l-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.l-flex {
+  display: flex;
+  gap: 0.5rem;
+  aspect-ratio: 1/1;
+  height: 18px;
+  align-items: center;
+  &--big {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 30px;
+  }
+}
+
+hr {
+  width: 100%;
+  border-color: s.$VeryDarkBlueLine;
+  margin: 1.5rem 0;
+}
