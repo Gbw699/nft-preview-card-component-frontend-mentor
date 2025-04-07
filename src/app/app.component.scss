@@ -5,11 +5,41 @@
   flex-direction: column;
   max-width: 18rem;
   padding: 1.3rem;
+  margin: 1rem;
   border-radius: 10px;
   background-color: s.$VeryDarkBlueCardBG;
-  &__img {
-    border-radius: 7px;
+  &__img-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
     margin-bottom: 0.5rem;
+    overflow: hidden;
+  }
+  &__img {
+    width: 100%;
+    &--hover-container {
+      position: absolute;
+      padding: 0;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.2s;
+      background-color: rgba($color: s.$Cyan, $alpha: 0.5);
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+      &:focus {
+        opacity: 1;
+      }
+    }
   }
   &__title {
     font-size: 1.45rem;
@@ -18,6 +48,7 @@
   &__link {
     color: s.$White;
     text-decoration: none;
+    transition: all 0.2s;
     &:hover {
       color: s.$Cyan;
     }
@@ -28,7 +59,7 @@
   }
   &__description {
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     line-height: 1.7rem;
     &--nowrap {
       text-wrap: nowrap;
@@ -48,12 +79,12 @@
   }
 }
 
-.l-container {
+.l__container {
   display: flex;
   justify-content: space-between;
 }
 
-.l-flex {
+.l__flex {
   display: flex;
   gap: 0.5rem;
   aspect-ratio: 1/1;
